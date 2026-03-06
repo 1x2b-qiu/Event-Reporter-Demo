@@ -17,7 +17,7 @@
 - **内置 Sender**
   - `ConsoleSender`：输出到控制台。
   - `NetworkSender`：模拟网络请求。
-  - `NetworkSender`：UI同步展示日志（扩展）。
+  - `UiLogSender`：UI同步展示日志（扩展）。
 
 **非阻塞策略**：UI 线程只负责 `report()` → 入队，真正发送在协程后台执行，避免主线程卡顿。
 
