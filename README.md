@@ -6,8 +6,8 @@
 
 - **Event（数据层）**
   - `Event(name, params, timestamp)`：描述一次用户行为事件。
-- **EventReporter（门面/入口）**
-  - `EventReporter.init(scope, senders)`：初始化，注入协程作用域与发送器列表。
+- **EventReporter（上报事件）**
+  - `EventReporter.init(scope, senders)`：初始化，注入协程作用域与发送器列表，可以在MainActivity中控制队列的生命周期。
   - `EventReporter.report(...)`：对外暴露上报 API；调用后立即返回，不阻塞主线程。
 - **EventQueue（队列/调度层）**
   - 内部维护事件队列（例如 Channel/队列结构）。
