@@ -40,9 +40,6 @@
 5. 打开 Logcat，过滤 tag：`EventReporter`，在 App 中触发按钮/操作后可看到：
    - `[Console] ...`（ConsoleSender 输出）
    - `[Network] ...`（NetworkSender 模拟网络输出）
-
-> 注意：如果你用的是 `object EventReporter`，请确保在 `MainActivity.onCreate()` 中先调用 `EventReporter.init(lifecycleScope)` 再触发上报。
-
 ---
 
 ### 3. 可继续改进的方向
