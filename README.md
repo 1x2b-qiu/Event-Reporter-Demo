@@ -50,11 +50,8 @@
 
 ### 4. AI 使用说明
 
-本项目使用了 **ChatGPT（GPT-5.2）** 辅助完成。
-- 用途：
-  - 讨论整体架构（EventReporter / EventQueue / Sender 插拔）
+我使用了 **Cursor** 辅助完成。
+- 通过AI：
   - 给出 Kotlin 协程、Channel/队列消费的实现建议
   - 帮助梳理 README 的结构与表述
-- 我在本地完成了：
-  - 代码落地与调试
-  - 在 Android Studio 中编译运行验证
+
