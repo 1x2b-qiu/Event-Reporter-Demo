@@ -10,13 +10,13 @@
   - `EventReporter.init(scope, senders)`：初始化，注入协程作用域与发送器列表，可以在MainActivity中控制队列的生命周期。
   - `EventReporter.report(...)`：对外暴露上报 API；调用后立即返回，不阻塞主线程。
 - **EventQueue（队列/调度层）**
-  - 内部维护事件队列（例如 Channel/队列结构）。
+  - 内部维护事件队列。
   - 使用协程在后台线程消费事件，并按顺序分发给多个 Sender。
 - **EventSender（发送策略接口）**
   - `EventSender.sender(event)`：发送行为抽象成接口，支持插拔扩展。
 - **内置 Sender**
-  - `ConsoleSender`：输出到 Logcat（控制台）。
-  - `NetworkSender`：模拟网络请求（delay 模拟耗时，不真实联网）。
+  - `ConsoleSender`：输出到控制台。
+  - `NetworkSender`：模拟网络请求。
 
 **非阻塞策略**：UI 线程只负责 `report()` → 入队；真正发送在协程后台执行，避免主线程卡顿。
 
