@@ -4,7 +4,7 @@
 
 本 Demo 实现了一个“事件上报”最小闭环：业务侧产生 Event → 非阻塞入队 → 后台消费队列 → 通过多种 Sender 发送（可插拔、可扩展）。
 
-- **Event（数据层）**
+**Event（数据层）**
   - `Event(name, params, timestamp)`：描述一次用户行为事件。
 - **EventReporter（门面/入口）**
   - `EventReporter.init(scope, senders)`：初始化，注入协程作用域与发送器列表。
